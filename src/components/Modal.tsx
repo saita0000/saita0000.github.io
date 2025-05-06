@@ -15,11 +15,31 @@ export default function WorkModal({ image, title, description }: WorkModalProps)
 
   return (
     <>
-      <div onClick={click} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+      <div
+        onClick={click}
+        style={{
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          backgroundColor: 'white',
+          borderRadius: '20px',
+          padding: '10px',
+          boxShadow: '0 4px 8px rgba(114, 114, 114, 0.2)',
+          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-5px)';
+          e.currentTarget.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 8px rgba(114, 114, 114, 0.2)';
+        }}
+      >
         <img src={image} alt={title} width="150" height="130" />
         <p style={{ fontSize: "1.1vw" }}>{title}</p>
       </div>
-
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
