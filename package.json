@@ -11,7 +11,7 @@
   "dependencies": {
     "astro": "^5.7.10"
   },
-  "volta" : {
+  "volta": {
     "node": "22.15.0",
     "pnpm": "10.10.0"
   }
