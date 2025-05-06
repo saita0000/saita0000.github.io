@@ -1,4 +1,3 @@
-// Modal.tsx
 import { useState } from 'preact/hooks';
 
 interface WorkModalProps {
