@@ -1,12 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import face from '../assets/face.jpeg';
-import foundation from '../assets/foundation.svg';
-import invoice from '../assets/invoice.svg';
-import growth from '../assets/growth.svg';
-import homepage from '../assets/homepage.svg';
-import skills from '../assets/skills.svg';
-
 import Modal from '../components/Modal.astro';
 import WorkModal from '../components/Modal.tsx';
 import MorphingBlobs from '../components/MorphingBlobs.astro';
@@ -26,7 +18,7 @@ import MorphingBlobs from '../components/MorphingBlobs.astro';
 		<div id="container">
 			<h2>About me</h2>
 			<div id="description">
-				<Image src={face} alt="face image" width="300" height="300"  class="profile-image" />
+				<img src="/public/face.jpeg" alt="face image" width="300" height="300" class="profile-image" />
 				<div>
 					<div id="name">
 						<h3>齊田　真澄</h3>
@@ -48,28 +40,28 @@ import MorphingBlobs from '../components/MorphingBlobs.astro';
 				  <WorkModal 
 					id="work"
 				  	client:load
-					image={foundation.src}
+					image="/public/foundation.svg"
 					title="助成金支援システムの開発・運用" 
 					description="助成金支援システムの新規機能開発やバグ対応などの運用保守業務を行なっています。\n要件定義から担当させていただき、ミーティングやBacklogにて積極的にコミュニケーションをとり、お客様の目的が実現できる仕様を提案してまいりました。 \nAWSのLambaを用いた認証機能の実装経験があります。" 
 				  />
 				  <WorkModal 
 					id="work"
 				  	client:load
-					image={invoice.src} 
+					image="/public/invoice.svg"
 					title="シフト・請求書管理システムの開発"
 					description="シフト・請求書管理システムを新規開発し、運用まで対応。\nFreee連携による請求書管理や、Firebaseを用いたユーザーCRUD機能を実装。複数管理の同時編集防止機能や、操作ログのタイムライン表示機能なども開発しました。\nCloud FunctionsやLambdaの活用により、効率的な開発・デプロイ環境も構築しました。"
 				  />
 				  <WorkModal 
 					id="work"
 				  	client:load
-					image={growth.src} 
+					image="/public/growth.svg"
 					title="個人成長支援システムの開発"
 					description="個人成長支援システムを新規で開発し、フロントエンドからバックエンドまで一貫して担当しました。\nユーザーが直感的に操作できるUIの設計・実装を行い、動画視聴履歴や自己診断結果に基づいた成長記録機能を開発しました。\nまた、学習効果を高めるためのレコメンド機能や、進捗状況の可視化機能を実装し、ユーザーの継続的な利用を促進しました。\nリリース後はフィードバックを基に改修を行い、安定運用に向けたサポートやドキュメント整備にも取り組みました。"
 				  />
 				  <WorkModal 
 					id="work"
 				  	client:load
-					image={homepage.src} 
+					image="/public/homepage.svg"
 					title="Wordpressでホームページ構築"
 					description={`WordPressを用いて自社Webサイトのデザイン実装を行いました。\n特にコラムの執筆者欄の実装においては、CSSをソースコード側で管理し、HTMLはWordPress上で編集できるように設計することで、クラスの切り替えのみでデザイン変更が可能な柔軟な構造を実現しました。\nまた、設計段階ではプラグインの導入可否を含めて複数の実装方法を検討し、工数と保守性のバランスを考慮した効率的な開発を行いました。`}
 					/>
@@ -78,7 +70,7 @@ import MorphingBlobs from '../components/MorphingBlobs.astro';
 		<div id="container">
 			<h2>Skills</h2>
 			<div id="description">
-				<Image src={skills} alt="skills" width="900" />
+				<img src="/public/skills.svg" alt="skills" width="900" />
 			</div>
 		</div>
 		<div id="container-grey">
